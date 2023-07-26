@@ -4,12 +4,13 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:surf_practice_magic_ball/screen/viewModel/Logic/BallLogic.dart';
 import 'package:surf_practice_magic_ball/screen/viewModel/Logic/BallState.dart';
 import 'package:surf_practice_magic_ball/screen/viewModel/MagicBallViewModelState.dart';
-import 'package:surf_practice_magic_ball/src/core/repositories/dataSource/dataSource.dart';
+
+import 'package:surf_practice_magic_ball/src/core/repositories/repository_protocol.dart';
 
 class MagicBallViewModel extends Cubit<MagicBallViewModelState> {
   late final BallLogic logic;
   late final StreamSubscription<BallState> subscribe;
-  final DataSourceProtocol repository;
+  final RepositoryProtocol repository;
 
   MagicBallViewModel(super.initialState, this.repository,
       {required BallLogic logicBloc}) {

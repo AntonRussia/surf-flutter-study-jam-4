@@ -21,6 +21,7 @@ class ResponseMapper {
         words: domainModel.keyHelper<List<String>>(key: 'words'),
         positive: domainModel.keyHelper<List<String>>(key: 'positive'),
         negative: domainModel.keyHelper<List<dynamic>>(key: 'positive'));
+
     return entity;
   }
 }
